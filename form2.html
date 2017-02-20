@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Emergency | Form Hospital Details</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" src="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/mScript.js"></script>
+	<script>
+		
+	</script>
+</head>
+<body>
+	<div id= "form2" >
+		<input type="text"  id="hospName" placeholder="hospName" />
+		<input type="text" id="contact" placeholder="contact"  />
+		
+		<input type="text" id="location" placeholder="location"  />
+		<button onclick = "locate();showLocation();">Loacate Me (Hospital)</button>
+		
+		<input type="submit" value="Submit" id="button" onclick="writeUserData2()" />
+		<input type="submit" value="UpdateData" id="button" onclick="UpdateUserData2()" />
+		<input type="submit" value="getData" id="button" onclick="getData2()" />
+		
+	</div>
+	
+</body>
+</html>
+<script>
+
+
+function showLocation(){
+
+	var retrievedObjectLat = localStorage.getItem('lat') || '0';
+	//JSON.stringify(retrievedObjectLat);
+	console.log(retrievedObjectLat);
+	retrievedObjectLat = Number(retrievedObjectLat);
+	console.log(retrievedObjectLat);
+			
+	var retrievedObjectLng = localStorage.getItem('lng') || '0';
+	//JSON.stringify(retrievedObjectLng);
+	console.log(retrievedObjectLng);
+	retrievedObjectLng = Number(retrievedObjectLng);
+	console.log(retrievedObjectLng);
+
+	document.getElementById("location").value = retrievedObjectLat + " " +  retrievedObjectLng;
+}
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+
+<!--script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC81nvNLARXnAtTxYweMH0jeE76AUKQNWY",
+    authDomain: "allin1-1302e.firebaseapp.com",
+    databaseURL: "https://allin1-1302e.firebaseio.com",
+    storageBucket: "allin1-1302e.appspot.com",
+    messagingSenderId: "1046040912689"
+  };
+  firebase.initializeApp(config);
+</script-->
+<script src="js/firebaseAPI.js"></script>
+
+<script src="js/gLogin.js"></script>
+<script src="js/postGetData.js"></script>

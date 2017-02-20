@@ -1,0 +1,54 @@
+<html>
+<head>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	
+	<title>Emergency | Map</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" src="css/style.css">
+	
+</head>
+<body>
+	<!--hidden part- just to avoid js error mentiones here-->
+	<div id= "form1" >
+		<input type="text"  id="username" placeholder="username" />
+		<input type="text" id="ph" placeholder="phone"  />
+		<input type="submit" value="Submit" id="button" onclick="writeUserData()" />
+		
+	</div>
+	<!------------------ hidden part end --------------------->
+	<input type="submit" value="getData" id="button" onclick="getData()" />
+	
+	<a href = "form1.html" >update info</a>
+	<button id="login" onclick="signIn()" >gSignIn</button>
+	<button id="logout" onclick="signOut()">signOut</button>
+	<div id="container"></div>
+</body>
+</html>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy0AQZUP7MYB5w-GOVN_2Eeq2ehguGFeE"></script>﻿
+<script src="js/mScript.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<!--script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC81nvNLARXnAtTxYweMH0jeE76AUKQNWY",
+    authDomain: "allin1-1302e.firebaseapp.com",
+    databaseURL: "https://allin1-1302e.firebaseio.com",
+    storageBucket: "allin1-1302e.appspot.com",
+    messagingSenderId: "1046040912689"
+  };
+  firebase.initializeApp(config);
+</script-->
+<script src="js/firebaseAPI.js"></script>
+<script src="js/gLogin.js"></script>
+<script src="js/postGetData.js"></script>
+<script>
+	locate();
+	getData3();
+	
+</script>
+<style>
+#form1 {
+  display: none;
+}
+</style>
