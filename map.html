@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	
 	<title>Emergency | Map</title>
@@ -8,6 +9,8 @@
 	
 </head>
 <body>
+<p id="userName"></p>
+	<p id="userEmail"></p>
 	<!--hidden part- just to avoid js error mentiones here-->
 	<div id= "form1" >
 		<input type="text"  id="username" placeholder="username" />
@@ -22,6 +25,10 @@
 	<button id="login" onclick="signIn()" >gSignIn</button>
 	<button id="logout" onclick="signOut()">signOut</button>
 	<div id="container"></div>
+	<button id="call" onclick="sendLoc()">sendMyLoc to NearestHosp</button>
+	<button id="cancel" onclick="cancelCall()">cancel Ambulance Service</button>
+	<p id="NearestHospDetail"></p>
+	<p id = "status" > </p>
 </body>
 </html>
 
@@ -45,6 +52,7 @@
 <script>
 	locate();
 	getData3();
+	user_status();
 	
 </script>
 <style>

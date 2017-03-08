@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Emergency | Form User Details</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
@@ -7,13 +8,15 @@
 	
 </head>
 <body>
+<p id="userName"></p>
+	<p id="userEmail"></p>
 	<div id= "form1" >
 		<input type="text"  id="username" placeholder="username" />
 		<input type="text" id="ph" placeholder="phone"  />
 		<input type="submit" value="Submit" id="button" onclick="writeUserData()" />
-		<input type="submit" value="UpdateData" id="button" onclick="UpdateUserData()" />
-		<input type="submit" value="getData" id="button" onclick="getData()" />
-		<input type="submit" value="getAllHospDetail" id="button" onclick="getData3()" />
+		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData()" /-->
+		<!--input type="submit" value="getData" id="button" onclick="getData()" /-->
+		<!--input type="submit" value="getAllHospDetail" id="button" onclick="getData3()" /-->
 		
 	</div>
 </body>
@@ -36,7 +39,7 @@
 <script src="js/gLogin.js"></script>
 <script src="js/postGetData.js"></script>
 <script>
-
+getData();
 	
 	
 </script>

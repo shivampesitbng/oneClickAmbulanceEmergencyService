@@ -86,6 +86,7 @@ function signOut(){
 	$("#logout").hide();
 	location.href="index.html";
 	console.log("going to index");
+	
 }
 	
 //Manage Users
@@ -97,6 +98,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 		 userEmail = user.email;
 		 console.log(userEmail);
 		 $("#login").hide();
+		 document.getElementById("userName").innerHTML = "Hi " + userName + " !";
+		 document.getElementById("userEmail").innerHTML = "You are logged in by Email: " + userEmail;
 		 
 	} else {
 		console.log("No user is signed in");

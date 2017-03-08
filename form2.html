@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Emergency | Form Hospital Details</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
@@ -10,6 +11,8 @@
 	</script>
 </head>
 <body>
+<p id="userName"></p>
+	<p id="userEmail"></p>
 	<div id= "form2" >
 		<input type="text"  id="hospName" placeholder="hospName" />
 		<input type="text" id="contact" placeholder="contact"  />
@@ -18,8 +21,8 @@
 		<button onclick = "locate();showLocation();">Loacate Me (Hospital)</button>
 		
 		<input type="submit" value="Submit" id="button" onclick="writeUserData2()" />
-		<input type="submit" value="UpdateData" id="button" onclick="UpdateUserData2()" />
-		<input type="submit" value="getData" id="button" onclick="getData2()" />
+		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData2()" /-->
+		<!--input type="submit" value="getData" id="button" onclick="getData2()" /-->
 		
 	</div>
 	
@@ -27,6 +30,8 @@
 </html>
 <script>
 
+locate();
+locate();
 
 function showLocation(){
 
@@ -44,6 +49,8 @@ function showLocation(){
 
 	document.getElementById("location").value = retrievedObjectLat + " " +  retrievedObjectLng;
 }
+
+
 </script>
 
 
@@ -64,3 +71,4 @@ function showLocation(){
 
 <script src="js/gLogin.js"></script>
 <script src="js/postGetData.js"></script>
+<script> getData2();</script>
