@@ -1,16 +1,21 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-
 	<title>Emergency | Login</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
-	
+	<script>
+		//whichPage();
+		localStorage.setItem('whichPage', JSON.stringify(0));
+	</script>
 	
 </head>
 <body>
-	<button id="login" onclick="signIn()" >gSignIn</button>
-	<button id="logout" onclick="signOut()">signOut</button>
+	<p id="userName"></p>
+	<p id="userEmail"></p>
+	<button id="calAmb" onclick="form1()">Call Ambulance</button>
+	<button id="regHos" onclick="form2()">Register Your Hospital</button>
+	
 </body>
 </html>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -28,5 +33,16 @@
   firebase.initializeApp(config);
 </script-->
 <script src="js/firebaseAPI.js"></script>
-<script src="js/postGetData.js"></script>
 <script src="js/gLogin.js"></script>
+<script src="js/postGetData.js"></script>
+<script>
+	
+function form1(){
+	location.href = "form1.html";
+}
+function form2(){
+	location.href = "form2.html";
+}
+	
+	
+</script>

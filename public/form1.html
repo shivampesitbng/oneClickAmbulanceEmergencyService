@@ -1,18 +1,27 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Emergency | Login</title>
+	<title>Emergency | Form User Details</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
-	
+	<script>
+		//whichPage();
+		localStorage.setItem('whichPage', JSON.stringify(0));
+	</script>
 	
 </head>
 <body>
-	<p id="userName"></p>
+<p id="userName"></p>
 	<p id="userEmail"></p>
-	<button id="calAmb" onclick="form1()">Call Ambulance</button>
-	<button id="regHos" onclick="form2()">Register Your Hospital</button>
-	
+	<div id= "form1" >
+		<input type="text"  id="username" placeholder="username" />
+		<input type="text" id="ph" placeholder="phone"  />
+		<input type="submit" value="Submit" id="button" onclick="writeUserData()" />
+		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData()" /-->
+		<!--input type="submit" value="getData" id="button" onclick="getData()" /-->
+		<!--input type="submit" value="getAllHospDetail" id="button" onclick="getData3()" /-->
+		
+	</div>
 </body>
 </html>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -33,13 +42,7 @@
 <script src="js/gLogin.js"></script>
 <script src="js/postGetData.js"></script>
 <script>
-	
-function form1(){
-	location.href = "form1.html";
-}
-function form2(){
-	location.href = "form2.html";
-}
+getData();
 	
 	
 </script>

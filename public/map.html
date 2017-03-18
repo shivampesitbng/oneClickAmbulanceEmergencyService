@@ -6,7 +6,10 @@
 	<title>Emergency | Map</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
-	
+	<script>
+		//whichPage();
+		localStorage.setItem('whichPage', JSON.stringify(0));
+	</script>
 </head>
 <body>
 <p id="userName"></p>
@@ -19,7 +22,7 @@
 		
 	</div>
 	<!------------------ hidden part end --------------------->
-	<input type="submit" value="getData" id="button" onclick="getData()" />
+	<!--input type="submit" value="getData" id="button" onclick="getData()" /-->
 	
 	<a href = "form1.html" >update info</a>
 	<button id="login" onclick="signIn()" >gSignIn</button>

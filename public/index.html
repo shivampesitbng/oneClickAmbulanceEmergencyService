@@ -1,24 +1,21 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Emergency | Form User Details</title>
+
+	<title>Emergency | Login</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
-	
+	<script>
+		//whichPage();
+		localStorage.setItem('whichPage', JSON.stringify(1));
+	</script>
 	
 </head>
 <body>
-<p id="userName"></p>
+	<p id="userName"></p>
 	<p id="userEmail"></p>
-	<div id= "form1" >
-		<input type="text"  id="username" placeholder="username" />
-		<input type="text" id="ph" placeholder="phone"  />
-		<input type="submit" value="Submit" id="button" onclick="writeUserData()" />
-		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData()" /-->
-		<!--input type="submit" value="getData" id="button" onclick="getData()" /-->
-		<!--input type="submit" value="getAllHospDetail" id="button" onclick="getData3()" /-->
-		
-	</div>
+	<button id="login" onclick="signIn()" >gSignIn</button>
+	<button id="logout" onclick="signOut()">signOut</button>
 </body>
 </html>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -36,10 +33,5 @@
   firebase.initializeApp(config);
 </script-->
 <script src="js/firebaseAPI.js"></script>
-<script src="js/gLogin.js"></script>
 <script src="js/postGetData.js"></script>
-<script>
-getData();
-	
-	
-</script>
+<script src="js/gLogin.js"></script>

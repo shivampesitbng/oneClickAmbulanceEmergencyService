@@ -1,0 +1,42 @@
+{
+  "hosp" : {
+    "priyanshucmritbng@gmailDOTcom" : {
+      "contact" : "9726600445",
+      "gMail2" : "priyanshucmritbng@gmail.com",
+      "hosLat" : 12.8944694,
+      "hosLng" : 77.5967312,
+      "hospName" : "Fortis Healthworld, Bannerghatta"
+    },
+    "shivampesitbng@gmailDOTcom" : {
+      "contact" : "9431088007",
+      "gMail2" : "shivampesitbng@gmail.com",
+      "hosLat" : 17.4070747,
+      "hosLng" : 78.4282889,
+      "hospName" : "Apollo Health City Hospital, Hyderabad"
+    }
+  },
+  "hospUser" : {
+    "priyanshucmritbng@gmailDOTcom" : {
+      "user" : {
+        "shivampesitbng@gmailDOTcom" : {
+          "userLat" : 12.943306699999999,
+          "userLng" : 77.62405389999999,
+          "userMail" : "shivampesitbng@gmail.com",
+          "userPh" : "7204801946"
+        }
+      }
+    }
+  },
+  "users" : {
+    "priyanshucmritbng@gmailDOTcom" : {
+      "gMail" : "priyanshucmritbng@gmail.com",
+      "name" : "priyanshu sinha",
+      "ph" : "9554684523"
+    },
+    "shivampesitbng@gmailDOTcom" : {
+      "gMail" : "shivampesitbng@gmail.com",
+      "name" : "shivam singh",
+      "ph" : "7204801946"
+    }
+  }
+}
