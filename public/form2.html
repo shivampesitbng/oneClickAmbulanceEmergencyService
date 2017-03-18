@@ -1,31 +1,56 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Emergency | Form Hospital Details</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/mScript.js"></script>
+	
 	<script>
 		//whichPage();
 		localStorage.setItem('whichPage', JSON.stringify(0));
 	</script>
 </head>
 <body>
-<p id="userName"></p>
-	<p id="userEmail"></p>
-	<div id= "form2" >
-		<input type="text"  id="hospName" placeholder="hospName" />
-		<input type="text" id="contact" placeholder="contact"  />
+
+	
+	
+	<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+     <div >
+			<p id="userName" ></p>
+			<p id="userEmail" ></p>
+		</div>
+    </div>
+    <div class="col-sm-4" >
+     <div align="center" style=" margin-top: 40%;">
+		<div id= "form2" >
+		<input type="text"  id="hospName" placeholder="hospName" /><br><br>
+		<input type="text" id="contact" placeholder="contact"  /><br><br>
 		
 		<input type="text" id="location" placeholder="location"  />
-		<button onclick = "locate();showLocation();">Loacate Me (Hospital)</button>
+		<button onclick = "locate();showLocation();" id="button">Loacate Me</button><br><br><br>
 		
-		<input type="submit" value="Submit" id="button" onclick="writeUserData2()" />
+		<input type="submit" value="Submit" id="button2" onclick="writeUserData2()" />
 		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData2()" /-->
 		<!--input type="submit" value="getData" id="button" onclick="getData2()" /-->
 		
 	</div>
+	
+	  </div>
+    </div>
+    <div class="col-sm-4">
+       
+    </div>
+  </div>
+</div>
 	
 </body>
 </html>
@@ -73,3 +98,64 @@ function showLocation(){
 <script src="js/gLogin.js"></script>
 <script src="js/postGetData.js"></script>
 <script> getData2();</script>
+
+<style>
+	input[type=text] {
+    
+		padding: 6px 10px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid red;
+		margin-right:2px;
+		margin-left:2px;
+		
+	}
+	input{
+		text-align:center;
+		
+	}
+	input::-webkit-input-placeholder {
+		text-align:center;
+		font-size: 10px;
+	
+	
+	
+	}
+	#button{
+		 background-color: #f0ad4e; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 40px;
+		text-align: center;
+		
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	#button{
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	#button2{
+		 background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 40px;
+		text-align: center;
+		width:60%;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	#button2 {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+</style>

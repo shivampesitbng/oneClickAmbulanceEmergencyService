@@ -1,6 +1,10 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Emergency | Login</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
@@ -11,10 +15,31 @@
 	
 </head>
 <body>
-	<p id="userName"></p>
-	<p id="userEmail"></p>
-	<button id="calAmb" onclick="form1()">Call Ambulance</button>
+	
+	
+	
+	<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div >
+			<p id="userName" ></p>
+			<p id="userEmail" ></p>
+		</div>
+    </div>
+    <div class="col-sm-4" >
+     <div align="center" style=" margin-top: 65%;">
+	 <div>
+		<button id="calAmb" onclick="form1()">Call Ambulance</button>
+		</div><br><div>
 	<button id="regHos" onclick="form2()">Register Your Hospital</button>
+	</div>
+	  </div>
+    </div>
+    <div class="col-sm-4">
+      
+    </div>
+  </div>
+</div>
 	
 </body>
 </html>

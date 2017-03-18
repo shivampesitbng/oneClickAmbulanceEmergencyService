@@ -1,10 +1,14 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/jquery-3.1.1.min.js"></script>
 	
 	<title>Emergency | Hosp</title>
-	<meta charset="UTF-8">
+	
 	<link type="text/css" rel="stylesheet" src="css/style.css">
 	<script>
 		//whichPage();
@@ -12,8 +16,30 @@
 	</script>
 </head>
 <body>
-<p id="userName"></p>
-	<p id="userEmail"></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+	
+     <div >
+			<p id="userName" ></p>
+			<p id="userEmail" ></p>
+		</div>
+			<a href = "#" onclick = "update()">update info</a>
+	<button id="login" onclick="signIn()" >gSignIn</button>
+	<button id="logout" onclick="signOut()">signOut</button>
+    </div>
+    <div class="col-sm-4" >
+     
+    </div>
+    <div class="col-sm-4">
+       
+    </div>
+  </div>
+</div>
+
+
+
 	<!--hidden part- just to avoid js error mentiones here-->
 	<div id= "form2" >
 	
@@ -26,13 +52,15 @@
 	<!------------------ hidden part end --------------------->
 	<!--input type="submit" value="getData" id="button" onclick="getData2()" /-->
 	
-	<a href = "#" onclick = "update()">update info</a>
-	<button id="login" onclick="signIn()" >gSignIn</button>
-	<button id="logout" onclick="signOut()">signOut</button>
+
+	
 	
 	<!--button id="logout" onclick="getUserCall()">Get User Call</button-->
+	<br><br>
+<div class="jumbotron text-center">
+<p id = "container"></p>
+</div >
 	
-	<p id = "container"></p>
 </body>
 </html>
 
@@ -66,4 +94,65 @@ setInterval(getUserCall,10000);
 #form2 {
   display: none;
 }
+</style>
+
+<style>
+	input[type=text] {
+    
+		padding: 6px 10px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid red;
+		margin-right:2px;
+		margin-left:2px;
+		
+	}
+	input{
+		text-align:center;
+		
+	}
+	input::-webkit-input-placeholder {
+		text-align:center;
+		font-size: 10px;
+	
+	
+	
+	}
+	#login{
+		 background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 40px;
+		text-align: center;
+		
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	#login{
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+		#logout{
+		 background-color: #d9534f; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 40px;
+		text-align: center;
+		
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	#logout {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
 </style>

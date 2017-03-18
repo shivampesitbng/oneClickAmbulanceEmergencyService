@@ -1,6 +1,10 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Emergency | Form User Details</title>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" src="css/style.css">
@@ -11,17 +15,37 @@
 	
 </head>
 <body>
-<p id="userName"></p>
-	<p id="userEmail"></p>
-	<div id= "form1" >
-		<input type="text"  id="username" placeholder="username" />
+
+	
+	
+	<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+     <div >
+			<p id="userName" ></p>
+			<p id="userEmail" ></p>
+		</div>
+    </div>
+    <div class="col-sm-4" >
+     <div align="center" style=" margin-top: 50%;">
+		<div id= "form1" >
+		<input type="text"  id="username" placeholder="username" style = "" />
+		</br></br>
 		<input type="text" id="ph" placeholder="phone"  />
+		</br></br>
 		<input type="submit" value="Submit" id="button" onclick="writeUserData()" />
 		<!--input type="submit" value="UpdateData" id="button" onclick="UpdateUserData()" /-->
 		<!--input type="submit" value="getData" id="button" onclick="getData()" /-->
 		<!--input type="submit" value="getAllHospDetail" id="button" onclick="getData3()" /-->
 		
-	</div>
+		</div>
+	  </div>
+    </div>
+    <div class="col-sm-4">
+       
+    </div>
+  </div>
+</div>
 </body>
 </html>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -46,3 +70,45 @@ getData();
 	
 	
 </script>
+<style>
+	input[type=text] {
+    
+		padding: 6px 10px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid red;
+		margin-right:2px;
+		margin-left:2px;
+		
+	}
+	input{
+		text-align:center;
+		
+	}
+	input::-webkit-input-placeholder {
+		text-align:center;
+		font-size: 10px;
+	
+	
+	
+	}
+	#button,button{
+		 background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 40px;
+		text-align: center;
+		
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	#button,button {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+</style>
